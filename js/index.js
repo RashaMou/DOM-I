@@ -45,6 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link, i) => {
   link.textContent = siteContent["nav"][`nav-item-${i+1}`]
+  link.style.color = 'green';
 });
 
 // inset code snippet image
@@ -117,6 +118,26 @@ address[2].textContent = siteContent["contact"]["email"];
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
+
+// Add two new items to navigation
+
+const nav = document.querySelector('nav'); 
+let newNavItem = document.createElement('a'); 
+newNavItem.textContent = 'Home'; 
+newNavItem.style.color = 'green';
+newNavItem.href = '#';
+
+let newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Another Idea';
+newNavItem2.style.color = 'green';
+newNavItem2.href = '#';
+
+
+nav.prepend(newNavItem);
+nav.appendChild(newNavItem2);
+
+
+
 
 
 
